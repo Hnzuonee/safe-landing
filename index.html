@@ -3,26 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bary - osobní web</title>
+    <title>Barbarella VIP</title>
     <style>
-        body { font-family: Arial, sans-serif; text-align: center; background-color: #f7f7f7; color: #333; padding: 40px; }
-        .links a { text-decoration: none; padding: 10px 15px; background-color: #ff69b4; color: white; border-radius: 5px; margin: 10px; display: inline-block; }
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom right, #ff9a9e, #fad0c4);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .container {
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+            background-color: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+            padding: 25px;
+        }
+        img {
+            width: 100%;
+            border-radius: 12px;
+            margin-bottom: 20px;
+        }
+        .btn {
+            display: block;
+            width: 100%;
+            background-color: #ff4b5c;
+            color: #ffffff;
+            padding: 12px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .btn:hover {
+            background-color: #ff3247;
+        }
+        .social-btn {
+            background-color: #1da1f2;
+        }
+        .social-btn.tiktok {
+            background-color: #000000;
+        }
+        h1 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: #333;
+        }
     </style>
 </head>
 <body>
-    <h1>Vítejte na mém webu!</h1>
-    <p>
-        Ahoj, já jsem Bary. Tato stránka slouží jako můj rozcestník na sociální sítě.
-        Najdete zde všechny důležité odkazy na mé projekty a profily.
-    </p>
-
-    <div class="links">
-        <a href="https://www.tiktok.com/@barbarella_xoxo/">TikTok</a>
-        <a href="https://x.com/barbarella_baru/">Twitter</a>
+    <div class="container">
+        <img src="foto.jpg" alt="Barbarella">
+        <h1>Tady je můj VIP obsah!</h1>
+        <a href="https://vip.barystranka.com" class="btn">🔥 Exkluzivní obsah zde 🔥</a>
+        <a href="https://www.tiktok.com/@barbarella_xoxo" class="btn social-btn tiktok">TikTok</a>
+        <a href="https://x.com/barbarella_baru" class="btn social-btn">X (Twitter)</a>
     </div>
-
-    <p>
-        Kontaktujte mě na emailu: <a href="mailto:info@barystranka.com">info@barystranka.com</a>
-    </p>
 </body>
 </html>
