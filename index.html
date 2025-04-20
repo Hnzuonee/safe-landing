@@ -1,0 +1,30 @@
+<!DOCTYPE html><html lang="cs">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Barbarella — VIP</title>
+  <style>
+    body{
+      font-family:Arial, sans-serif;background:#000 url('foto.jpg') center/cover no-repeat;
+      display:flex;justify-content:center;align-items:center;min-height:100vh;margin:0;
+    }
+    .btn{
+      padding:18px 26px;font-size:22px;background:#ff4b5c;border:none;border-radius:14px;
+      font-weight:bold;color:#fff;cursor:pointer;transition:.3s;
+    }
+    .btn:hover{background:#ff3247;}
+    .fade{opacity:0;transition:opacity .8s ease;}
+  </style>
+</head>
+<body>
+  <button id="vipBtn" class="btn">💎 Moje VIP stránka</button>
+
+  <script>
+    function go(){
+      document.body.classList.add('fade');                // +0,8 s dwell‑time
+      setTimeout(()=>location.href="https://rebaborkystranky.com", 800);
+    }
+    document.getElementById('vipBtn').onclick = go;
+  </script>
+</body>
+</html>
