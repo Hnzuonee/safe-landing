@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Barbarella VIP</title>
+  <style>
+    body{
+      font-family:Arial, sans-serif;background:#000;
+      display:flex;justify-content:center;align-items:center;
+      flex-direction:column;min-height:100vh;margin:0;padding:20px;box-sizing:border-box;
+    }
+    .container{
+      max-width:400px;width:100%;text-align:center;background:#fff;border-radius:15px;
+      box-shadow:0 10px 20px rgba(0,0,0,.25);padding:25px;
+    }
+    img{width:100%;border-radius:12px;margin-bottom:20px;}
+    .btn{
+      display:block;width:90%;max-width:350px;background:#ff4b5c;color:#fff;padding:12px;margin:10px auto;
+      border:none;border-radius:8px;font-weight:bold;cursor:pointer;transition:.3s;
+      text-decoration:none;text-align:center;
+    }
+    .btn:hover{background:#ff3247;}
+    .social-btn{background:#1da1f2;}
+    .social-btn.tiktok{background:#000;}
+    h1{font-size:24px;margin-bottom:15px;color:#333;}
+    /* animace pro dwell‑time */
+    .fade{opacity:0;transition:opacity .8s ease;}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="foto.jpg" alt="Barbarella">
+    <h1>Sleduj můj VIP obsah!</h1>
+
+    <!-- VIP tlačítko -->
+    <button id="vipBtn" class="btn">🔥 Exkluzivní obsah zde 🔥</button>
+
+    <!-- sociální sítě -->
+    <a href="https://www.tiktok.com/@barbarella_xoxo" class="btn social-btn tiktok" target="_blank" rel="noopener">TikTok</a>
+    <a href="https://x.com/barbarella_baru" class="btn social-btn" target="_blank" rel="noopener">X (Twitter)</a>
+  </div>
+
+  <script>
+  function openVIP(){
+    document.body.classList.add('fade');               // +0,8 s dwell‑time
+    setTimeout(()=>location.href='/.netlify/functions/vip-go',800);
+  }
+  document.getElementById('vipBtn').onclick = openVIP;
+  </script>
+
+  <!-- fallback pro vypnuté JS -->
+  <noscript>
+    <meta http-equiv="refresh" content="0;url=/.netlify/functions/vip-go">
+  </noscript>
+</body>
+</html>
