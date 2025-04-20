@@ -34,7 +34,7 @@
     <h1>Sleduj můj VIP obsah!</h1>
 
     <!-- VIP tlačítko -->
-    <button id="vipBtn" class="btn">🔥 Exkluzivní obsah zde 🔥</button>
+    <button id="vipBtn" class="btn">🔥 Exkluzivní obsah zde 🔥</button>
 
     <!-- sociální sítě -->
     <a href="https://www.tiktok.com/@barbarella_xoxo" class="btn social-btn tiktok" target="_blank" rel="noopener">TikTok</a>
@@ -43,7 +43,7 @@
 
   <script>
   function openVIP(){
-    document.body.classList.add('fade');               // +0,8 s dwell‑time
+    document.body.classList.add('fade');               // +0,8 s dwell‑time
     setTimeout(()=>location.href='/.netlify/functions/vip-go',800);
   }
   document.getElementById('vipBtn').onclick = openVIP;
