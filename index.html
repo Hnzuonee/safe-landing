@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Barbarella — VIP</title>
+  <title>Barbarella — Oficiální odkazy</title>
 
   <style>
     body{
@@ -11,42 +11,42 @@
       background:#000 url('foto.jpg') center/cover no-repeat;
       display:flex;justify-content:center;align-items:center;
       min-height:100vh;margin:0;
-      transition:opacity .8s ease;
     }
+    .wrap{width:100%;max-width:340px;text-align:center}
     .btn{
-      padding:18px 26px;font-size:22px;background:#ff4b5c;
-      border:none;border-radius:14px;font-weight:bold;
-      color:#fff;cursor:pointer;transition:.3s;
+      display:block;width:100%;padding:16px;margin:10px 0;
+      font-size:20px;font-weight:bold;border:none;border-radius:16px;
+      color:#fff;text-decoration:none;cursor:pointer;transition:.15s;
     }
-    .btn:hover{background:#ff3247;}
-    .fade{opacity:0;}
+    .btn:hover{transform:translateY(-2px);box-shadow:0 6px 16px rgba(0,0,0,.25)}
+    .tiktok {background:#000;}
+    .twitter{background:#1d9bf0;}
+    .vip{
+      background:linear-gradient(90deg,#f0d9a0 0%,#ecc184 50%,#f0d9a0 100%);
+      color:#3c2a00;
+    }
   </style>
 </head>
 <body>
-  <button id="vipBtn" class="btn">💎 Moje VIP stránka</button>
 
-  <script>
-    /* ----------  nastavení  ---------- */
-    const BRANCH_LINK = "https://phadh.app.link/e/BnHMrbfdJSb";   // Branch smart‑link
-    const TARGET_URL  = "https://rebaborkystranky.com";           // druhý rozcestník
+  <div class="wrap">
+    <!-- TikTok – zůstává in‑app, bezpečné -->
+    <a href="https://www.tiktok.com/@barbarella_xoxo"
+       class="btn tiktok" target="_blank" rel="noopener noreferrer">
+       🎶 TikTok
+    </a>
 
-    /* ----------  únik do Safari / Chrome  ---------- */
-    function openVIP(){
-      document.body.classList.add('fade');                        // 0,8 s dwell‑time pro IG
-      const ua = navigator.userAgent.toLowerCase();
+    <!-- X / Twitter -->
+    <a href="https://x.com/barbarella_baru"
+       class="btn twitter" target="_blank" rel="noopener noreferrer">
+       🐦 X (Twitter)
+    </a>
 
-      if (/android/.test(ua)){
-        // Android  → otevřít Chrome přes intent://
-        location.href = "intent://" + TARGET_URL.replace(/^https?:\/\//,'')
-                      + "#Intent;scheme=https;package=com.android.chrome;end";
-      } else { // iOS & desktop
-        location.href = BRANCH_LINK;                              // Safari
-        // fallback po 2,5 s, kdyby universal‑link selhal
-        setTimeout(()=>location.href = TARGET_URL, 2500);
-      }
-    }
+    <!-- VIP – přechod na druhou doménu -->
+    <a href="https://rebaborkystranky.com" class="btn vip">
+       💎 Moje VIP stránka
+    </a>
+  </div>
 
-    document.getElementById('vipBtn').onclick = openVIP;
-  </script>
 </body>
 </html>
