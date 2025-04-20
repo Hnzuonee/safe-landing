@@ -1,6 +1,6 @@
 // functions/vip-go.js
 exports.handler = async (event) => {
-  // IG prefetch → HEAD → pošleme 405, ať dá pokoj
+  // 💡 MUSÍ tu být parametr `event` – bez něj httpMethod nikdy nezjistíš
   if (event.httpMethod !== 'GET') {
     return {
       statusCode: 405,
@@ -9,14 +9,11 @@ exports.handler = async (event) => {
     };
   }
 
-  // Reálný klik uživatele → 302 ven z IG
   return {
     statusCode: 302,
     headers: {
-      Location: 'https://onlyfans.com/barbarella_xoxo', // uprav si URL
-      // žádný cache, ať se to nikdy nelepí
+      Location: 'https://onlyfans.com/barbarella_xoxo',
       'Cache-Control': 'no-store',
-      // mini CSP, IG to má rádo
       'Content-Security-Policy': "default-src 'none';"
     },
     body: ''
