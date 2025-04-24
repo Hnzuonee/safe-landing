@@ -1,17 +1,17 @@
-html_with_photo = """<!doctype html>
+<!doctype html>
 <html lang="cs">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
 
   <title>Barbarella — oficiální odkazy</title>
-  <meta name="description" content="Backstage odkazy Barbarelly">
+  <meta name="description" content="Backstage odkazy Barbarelly" />
 
   <style>
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
     body{
       font-family:Helvetica,Arial,sans-serif;
-      background:#12001a url('/bg.jpg') center/cover no-repeat fixed; /* volitelné pozadí */
+      background:#12001a url('/bg.jpg') center/cover no-repeat fixed;
       min-height:100dvh;display:grid;place-items:center;color:#fff;
     }
     .f3-card{
@@ -42,32 +42,30 @@ html_with_photo = """<!doctype html>
 <body>
 
   <section class="f3-card">
-     <!-- Nahraj soubor foto.jpg do kořene Netlify site, nebo změň src na absolutní URL -->
-     <img src="/foto.jpg" alt="Barbarella cover" class="f3-pic" />
+    <!-- Nahraj soubor foto.jpg do stejné složky, nebo změň src na absolutní URL -->
+    <img src="/foto.jpg" alt="Barbarella cover" class="f3-pic" />
 
-     <h1 class="f3-title">Barbarella • odkazy</h1>
-     <p  class="f3-sub">Vstup do VIP zóny 👇</p>
+    <h1 class="f3-title">Barbarella • odkazy</h1>
+    <p class="f3-sub">Vstup do VIP zóny 👇</p>
 
-     <a href="https://rebaborkystranky.com"
-        class="f3-btn f3-vip" target="_self">
-        💎 VIP zóna
-     </a>
+    <!-- VIP tlačítko – vede na 2. krok -->
+    <a href="https://rebaborkystranky.com"
+       class="f3-btn f3-vip" target="_self">
+       💎 VIP zóna
+    </a>
 
-     <a href="https://www.tiktok.com/@barbarella_xoxo"
-        class="f3-btn f3-tiktok" target="_blank" rel="noopener noreferrer">
-        🎶 TikTok
-     </a>
+    <!-- TikTok -->
+    <a href="https://www.tiktok.com/@barbarella_xoxo"
+       class="f3-btn f3-tiktok" target="_blank" rel="noopener noreferrer">
+       🎶 TikTok
+    </a>
 
-     <a href="https://x.com/barbarella_baru"
-        class="f3-btn f3-x" target="_blank" rel="noopener noreferrer">
-        🐦 X (Twitter)
-     </a>
+    <!-- X / Twitter -->
+    <a href="https://x.com/barbarella_baru"
+       class="f3-btn f3-x" target="_blank" rel="noopener noreferrer">
+       🐦 X (Twitter)
+    </a>
   </section>
 
 </body>
 </html>
-"""
-path="/mnt/data/preview_baryvip_photo.html"
-with open(path,"w",encoding="utf-8") as f:
-    f.write(html_with_photo)
-path
