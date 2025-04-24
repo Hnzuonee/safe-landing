@@ -1,52 +1,78 @@
 <!DOCTYPE html>
 <html lang="cs">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Barbarella — Oficiální odkazy</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Barbarella — Oficiální odkazy</title>
 
   <style>
+    /* === ZÁKLAD === */
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
     body{
-      font-family:Arial, sans-serif;
-      background:#000 url('foto.jpg') center/cover no-repeat;
-      display:flex;justify-content:center;align-items:center;
-      min-height:100vh;margin:0;
+      font-family:Helvetica,Arial,sans-serif;
+      background:#12001a url('/foto.jpg') center/cover no-repeat fixed;
+      min-height:100vh;display:grid;place-items:center;
+      color:#fff;
     }
-    .wrap{width:100%;max-width:340px;text-align:center}
-    .btn{
-      display:block;width:100%;padding:16px;margin:10px 0;
-      font-size:20px;font-weight:bold;border:none;border-radius:16px;
-      color:#fff;text-decoration:none;cursor:pointer;transition:.15s;
+
+    /* === KARTA / GRID === */
+    .g1-card{
+      display:grid;grid-template-rows:auto auto auto auto;
+      gap:14px;padding:40px 32px;width:100%;max-width:360px;
+      background:rgba(255,255,255,.08);
+      border:1px solid rgba(255,255,255,.18);
+      border-radius:26px;backdrop-filter:blur(22px);
+      text-align:center;
     }
-    .btn:hover{transform:translateY(-2px);box-shadow:0 6px 16px rgba(0,0,0,.25)}
-    .tiktok {background:#000;}
-    .twitter{background:#1d9bf0;}
-    .vip{
-      background:linear-gradient(90deg,#f0d9a0 0%,#ecc184 50%,#f0d9a0 100%);
-      color:#3c2a00;
+    .g1-pic{
+      width:144px;height:144px;place-self:center;
+      border-radius:20px;object-fit:cover;
+      box-shadow:0 8px 22px rgba(0,0,0,.35);
+    }
+    .g1-title{font-size:28px;font-weight:700}
+    .g1-sub{font-size:15px;opacity:.85}
+
+    /* === TLAČÍTKA === */
+    .g1-btn{
+      display:block;width:100%;padding:16px;margin-top:6px;
+      font-size:18px;font-weight:700;border:none;border-radius:18px;
+      text-decoration:none;cursor:pointer;transition:.15s;
+    }
+    .g1-btn:hover{transform:translateY(-2px);box-shadow:0 6px 16px rgba(0,0,0,.3)}
+    .g1-tiktok{background:#000;color:#fff;}
+    .g1-x{background:#1d9bf0;color:#fff;}
+    .g1-of{
+      background:linear-gradient(135deg,#a1e0ff 0%,#12c4ff 50%,#60eaff 100%);
+      color:#002332;
     }
   </style>
 </head>
 <body>
 
-  <div class="wrap">
-    <!-- TikTok – zůstává in‑app, bezpečné -->
-    <a href="https://www.tiktok.com/@barbarella_xoxo"
-       class="btn tiktok" target="_blank" rel="noopener noreferrer">
-       🎶 TikTok
-    </a>
+  <section class="g1-card">
+     <img src="/foto.jpg" alt="Barbarella cover" class="g1-pic">
 
-    <!-- X / Twitter -->
-    <a href="https://x.com/barbarella_baru"
-       class="btn twitter" target="_blank" rel="noopener noreferrer">
-       🐦 X (Twitter)
-    </a>
+     <h1 class="g1-title">Barbarella • odkazy</h1>
+     <p  class="g1-sub">Vyber si, kde mě chceš sledovat:</p>
 
-    <!-- VIP – přechod na druhou doménu -->
-    <a href="https://rebaborkystranky.com" class="btn vip">
-       💎 Moje VIP stránka
-    </a>
-  </div>
+     <!-- OnlyFans hned první -->
+     <a href="https://onlyfans.com/barbarella_vip"
+        class="g1-btn g1-of" target="_blank" rel="noopener noreferrer">
+        💎 OnlyFans (18+)
+     </a>
+
+     <!-- TikTok -->
+     <a href="https://www.tiktok.com/@barbarella_xoxo"
+        class="g1-btn g1-tiktok" target="_blank" rel="noopener noreferrer">
+        🎶 TikTok
+     </a>
+
+     <!-- X / Twitter -->
+     <a href="https://x.com/barbarella_baru"
+        class="g1-btn g1-x" target="_blank" rel="noopener noreferrer">
+        🐦 X (Twitter)
+     </a>
+  </section>
 
 </body>
 </html>
