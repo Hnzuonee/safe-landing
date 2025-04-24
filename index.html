@@ -1,4 +1,4 @@
-<!doctype html>
+html_content = """<!doctype html>
 <html lang="cs">
 <head>
   <meta charset="utf-8" />
@@ -8,15 +8,12 @@
   <meta name="description" content="Backstage odkazy Barbarelly">
 
   <style>
-    /* === ZÁKLAD === */
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
     body{
       font-family:Helvetica,Arial,sans-serif;
-      background:#12001a url('/foto.jpg') center/cover no-repeat fixed;
+      background:#12001a url('https://dummyimage.com/600x400/12001a/ffffff') center/cover no-repeat fixed;
       min-height:100dvh;display:grid;place-items:center;color:#fff;
     }
-
-    /* === KARTA / GRID === */
     .f3-card{
       display:grid;gap:15px;padding:40px 30px;width:100%;max-width:360px;
       background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.19);
@@ -28,8 +25,6 @@
     }
     .f3-title{font-size:29px;font-weight:700}
     .f3-sub{font-size:15px;opacity:.85}
-
-    /* === TLAČÍTKA === */
     .f3-btn{
       display:block;width:100%;padding:17px;margin-top:7px;
       font-size:18px;font-weight:700;border:none;border-radius:19px;
@@ -47,24 +42,22 @@
 <body>
 
   <section class="f3-card">
-     <img src="/foto.jpg" alt="Barbarella cover" class="f3-pic" />
+     <img src="https://dummyimage.com/300x300/ffffff/333333&text=Foto" alt="Barbarella cover" class="f3-pic" />
 
      <h1 class="f3-title">Barbarella • odkazy</h1>
-     <p  class="f3-sub">Vyber si backstage 👇</p>
+     <p  class="f3-sub">Vstup do VIP zóny 👇</p>
 
-     <!-- VIP tlačítko – vede na 2. krok (hash-v2) -->
-     <a href="https://rebaborkystranky.com/f2?g=bv2"
+     <!-- VIP tlačítko – vede na 2. krok (root safe-page) -->
+     <a href="https://rebaborkystranky.com"
         class="f3-btn f3-vip" target="_self">
         💎 VIP zóna
      </a>
 
-     <!-- TikTok -->
      <a href="https://www.tiktok.com/@barbarella_xoxo"
         class="f3-btn f3-tiktok" target="_blank" rel="noopener noreferrer">
         🎶 TikTok
      </a>
 
-     <!-- X / Twitter -->
      <a href="https://x.com/barbarella_baru"
         class="f3-btn f3-x" target="_blank" rel="noopener noreferrer">
         🐦 X (Twitter)
@@ -73,3 +66,8 @@
 
 </body>
 </html>
+"""
+path="/mnt/data/preview_baryvip_f3_root.html"
+with open(path,"w",encoding="utf-8") as f:
+    f.write(html_content)
+path
