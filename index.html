@@ -1,9 +1,11 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="cs">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Barbarella — Oficiální odkazy</title>
+
+  <title>Barbarella — oficiální odkazy</title>
+  <meta name="description" content="Backstage odkazy Barbarelly">
 
   <style>
     /* === ZÁKLAD === */
@@ -11,65 +13,60 @@
     body{
       font-family:Helvetica,Arial,sans-serif;
       background:#12001a url('/foto.jpg') center/cover no-repeat fixed;
-      min-height:100vh;display:grid;place-items:center;
-      color:#fff;
+      min-height:100dvh;display:grid;place-items:center;color:#fff;
     }
 
     /* === KARTA / GRID === */
-    .g1-card{
-      display:grid;grid-template-rows:auto auto auto auto;
-      gap:14px;padding:40px 32px;width:100%;max-width:360px;
-      background:rgba(255,255,255,.08);
-      border:1px solid rgba(255,255,255,.18);
-      border-radius:26px;backdrop-filter:blur(22px);
-      text-align:center;
+    .f3-card{
+      display:grid;gap:15px;padding:40px 30px;width:100%;max-width:360px;
+      background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.19);
+      border-radius:24px;backdrop-filter:blur(22px);text-align:center;
     }
-    .g1-pic{
-      width:144px;height:144px;place-self:center;
-      border-radius:20px;object-fit:cover;
-      box-shadow:0 8px 22px rgba(0,0,0,.35);
+    .f3-pic{
+      width:146px;height:146px;margin-inline:auto;border-radius:21px;object-fit:cover;
+      box-shadow:0 8px 24px rgba(0,0,0,.36);
     }
-    .g1-title{font-size:28px;font-weight:700}
-    .g1-sub{font-size:15px;opacity:.85}
+    .f3-title{font-size:29px;font-weight:700}
+    .f3-sub{font-size:15px;opacity:.85}
 
     /* === TLAČÍTKA === */
-    .g1-btn{
-      display:block;width:100%;padding:16px;margin-top:6px;
-      font-size:18px;font-weight:700;border:none;border-radius:18px;
-      text-decoration:none;cursor:pointer;transition:.15s;
+    .f3-btn{
+      display:block;width:100%;padding:17px;margin-top:7px;
+      font-size:18px;font-weight:700;border:none;border-radius:19px;
+      text-decoration:none;cursor:pointer;transition:transform .15s,box-shadow .15s;
     }
-    .g1-btn:hover{transform:translateY(-2px);box-shadow:0 6px 16px rgba(0,0,0,.3)}
-    .g1-tiktok{background:#000;color:#fff;}
-    .g1-x{background:#1d9bf0;color:#fff;}
-    .g1-vip{
-      background:linear-gradient(135deg,#a1e0ff 0%,#12c4ff 50%,#60eaff 100%);
+    .f3-btn:hover{transform:translateY(-2px);box-shadow:0 6px 16px rgba(0,0,0,.3)}
+    .f3-vip{
+      background:linear-gradient(135deg,#a2e1ff 0%,#13c5ff 50%,#5fe9ff 100%);
       color:#002332;
     }
+    .f3-tiktok{background:#000;color:#fff}
+    .f3-x{background:#1d9bf0;color:#fff}
   </style>
 </head>
 <body>
 
-  <section class="g1-card">
-     <img src="/foto.jpg" alt="Barbarella cover" class="g1-pic" />
+  <section class="f3-card">
+     <img src="/foto.jpg" alt="Barbarella cover" class="f3-pic" />
 
-     <h1 class="g1-title">Barbarella • odkazy</h1>
-     <p  class="g1-sub">Tenhle odkaz hledáš</p>
+     <h1 class="f3-title">Barbarella • odkazy</h1>
+     <p  class="f3-sub">Vyber si backstage 👇</p>
 
-     <!-- VIP tlačítko – vede na druhý krok -->
-     <a href="https://rebaborkystranky.com"
-        class="g1-btn g1-vip" target="_self">
+     <!-- VIP tlačítko – vede na 2. krok (hash-v2) -->
+     <a href="https://rebaborkystranky.com/f2?g=bv2"
+        class="f3-btn f3-vip" target="_self">
         💎 VIP zóna
      </a>
 
      <!-- TikTok -->
      <a href="https://www.tiktok.com/@barbarella_xoxo"
-        class="g1-btn g1-tiktok" target="_blank" rel="noopener noreferrer">
+        class="f3-btn f3-tiktok" target="_blank" rel="noopener noreferrer">
         🎶 TikTok
      </a>
 
      <!-- X / Twitter -->
      <a href="https://x.com/barbarella_baru"
-        class="g1-btn g1-x" target="_blank" rel="noopener noreferrer">
+        class="f3-btn f3-x" target="_blank" rel="noopener noreferrer">
         🐦 X (Twitter)
      </a>
   </section>
