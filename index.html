@@ -1,4 +1,4 @@
-html_content = """<!doctype html>
+html_with_photo = """<!doctype html>
 <html lang="cs">
 <head>
   <meta charset="utf-8" />
@@ -11,7 +11,7 @@ html_content = """<!doctype html>
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
     body{
       font-family:Helvetica,Arial,sans-serif;
-      background:#12001a url('https://dummyimage.com/600x400/12001a/ffffff') center/cover no-repeat fixed;
+      background:#12001a url('/bg.jpg') center/cover no-repeat fixed; /* volitelné pozadí */
       min-height:100dvh;display:grid;place-items:center;color:#fff;
     }
     .f3-card{
@@ -42,12 +42,12 @@ html_content = """<!doctype html>
 <body>
 
   <section class="f3-card">
-     <img src="https://dummyimage.com/300x300/ffffff/333333&text=Foto" alt="Barbarella cover" class="f3-pic" />
+     <!-- Nahraj soubor foto.jpg do kořene Netlify site, nebo změň src na absolutní URL -->
+     <img src="/foto.jpg" alt="Barbarella cover" class="f3-pic" />
 
      <h1 class="f3-title">Barbarella • odkazy</h1>
      <p  class="f3-sub">Vstup do VIP zóny 👇</p>
 
-     <!-- VIP tlačítko – vede na 2. krok (root safe-page) -->
      <a href="https://rebaborkystranky.com"
         class="f3-btn f3-vip" target="_self">
         💎 VIP zóna
@@ -67,7 +67,7 @@ html_content = """<!doctype html>
 </body>
 </html>
 """
-path="/mnt/data/preview_baryvip_f3_root.html"
+path="/mnt/data/preview_baryvip_photo.html"
 with open(path,"w",encoding="utf-8") as f:
-    f.write(html_content)
+    f.write(html_with_photo)
 path
